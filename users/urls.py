@@ -14,7 +14,7 @@ urlpatterns = [
 		path('s_list/', views.s_list, name='s_list'),
 		path('<int:id>/question/', views.question, name='question'),
 
-		path('create/logout', views.logout, name='logout'),
+		
 		path('create/join_list', views.join_list, name='join_list'),
 
 		path('<int:id>/title_list', views.title_list, name='title_list'),
