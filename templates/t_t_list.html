@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+{% for i in obj %}
+{{ i.title }} {{i.id }} <a href=" {% url 'users:last' s_id i.id %} "><button>SEE SOLUTION</button></a><br>
+{% endfor %}
+</body>
+</html>

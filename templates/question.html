@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+{% for i in obj %}
+{{i.ques}}
+
+<br>
+{% endfor%}
+<a href="{% url 'users:create' %}"><button>go back</button></a>
+
+<form method="post"> {% csrf_token %} 
+{{form.as_p}}
+<input type="submit" name="">
+
+
+</form>
+</body>
+</html>

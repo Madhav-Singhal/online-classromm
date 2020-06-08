@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+{% for i in list %}
+<a href="{% url 'users:t_t_list' i.s_user_id  %}">{{i.s_user}}</a>
+
+{% endfor%}
+<a href="{% url 'users:create' %}"><button>go back</button></a>
+
+</body>
+</html>

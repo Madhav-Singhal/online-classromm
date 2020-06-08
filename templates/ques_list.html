@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	{% for i in obj1 %}
+	{% if i.img %}
+	<img src="{{i.img.url}} " height="200" width="300" class="rounded float-left" /><a href=" {% url 'users:delete' i.id value pk %} ">delete</a><br>
+	{% endif %}
+	
+	{% endfor%}<br>
+{% for i in obj %}
+{{i.ques}}<br>
+
+{% endfor%}
+<form method="post" enctype="multipart/form-data">
+            {% csrf_token %} {{ form.as_p }}
+            <input type="submit" name="submit" />
+        </form>
+<a href="{% url 'users:title_list' value %}"><button>go back</button></a>
+
+</body>
+</html>

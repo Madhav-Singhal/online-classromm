@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  
+	<title></title>
+  
+</head>
+<body >
+  {% if messages %}
+                       
+                            {% for message in messages %}
+                            <div class="alert alert-danger fade in" >
+                                {{message}}
+                            </div>
+                            {% endfor %}
+                        
+                        {% endif %}
+          <div ><h3>Your unique code is: {{code}}</h3></div>
+
+          
+            
+        <a href="{% url 'users:logout' %}" align="right"><span>Logout</span></a>
+      
+
+
+	
+
+
+
+
+
+        <div class="inner" align="center"> <h1 color="white"><u>Your Assignment titles</u></h1></div>
+        <div class="container">
+  <div class="row">
+    
+      
+            {% for i in obj %}
+
+            
+
+
+              <div class="card" style="width: 18rem;">
+                <a href="{% url 'users:question' i.id %}">
+
+  <div class="card-body">
+    <div class="col-sm">
+    <h5 class="card-title">{{i.title}}</h5>
+</div>
+    
+  </div>
+</a>
+</div>
+               
+            {% endfor %}
+          </div></div>
+        
+
+<form method="post"> {% csrf_token %} 
+{{form.as_p}}
+<input type="submit" name="">
+</form>
+<a href="{% url 'users:logout' %}"><button>logout</button></a>
+<a href=" {% url 'users:join_list' %} "><button>students who joined</button></a>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>

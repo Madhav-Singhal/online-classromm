@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+    <title>OneSchool &mdash; Website by Colorlib</title>
+    
+    
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  
+ 
+                <li><a href="{% url 'users:register' %}" class="nav-link">Register</a></li>
+              
+                
+                  <form action="" method="post" class="form-box">
+                    {% csrf_token %}
+                    <h3 class="h4 text-black mb-4">Login</h3>
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                      <input type="password" class="form-control" placeholder="Password" name="password" required>
+                    </div>
+                    
+                    <div class="form-group">
+                      <input type="submit" class="btn btn-primary btn-pill" value="Log in">
+                    </div>
+                  </form>
+
+</body>
+</html>

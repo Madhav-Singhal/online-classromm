@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	{% if messages %}
+                       
+                            {% for message in messages %}
+                            <div class="alert alert-danger fade in" >
+                                {{message}}
+                            </div>
+                            {% endfor %}
+                        
+                        {% endif %}
+
+	<form method="post">  {% csrf_token%} {{form.as_p}}
+<input type="submit" name="">
+	</form>
+
+</body>
+</html>

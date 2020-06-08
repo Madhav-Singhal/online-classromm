@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+{% for i in obj %}
+<a href=" {% url 'users:ques_list' i.id val %} ">{{i.title}} <br>{{i.id}}</a> 
+<br>
+
+{% endfor%}
+<a href="{% url 'users:s_list' %}"><button>go back</button></a>
+
+</body>
+</html>
